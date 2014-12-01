@@ -1,5 +1,3 @@
-library(shiny)
- 
 # Define UI for performance summary application
 shinyUI(pageWithSidebar(
   
@@ -11,17 +9,20 @@ shinyUI(pageWithSidebar(
   # For example, HAM1 is managers[, 1], HAM2 is managers[, 2], and so on
   sidebarPanel(
     checkboxGroupInput("symbol", "Select Symbol(s):",
-                       c("HAM1" = 1, 
-                         "HAM2" = 2,
-                         "HAM3" = 3,
-                         "HAM4" = 4,
-                         "HAM5" = 5,
-                         "HAM6" = 6,
-                         "EDHEC LS EQ" = 7,
-                         "SP500 TR" = 8,
-                         "US 10Y TR" = 9,
-                         "US 3m TR" = 10),
-                       selected = "HAM1")),
+                       c("Public Equity" = 1, 
+                         "Private Equity" = 2,
+                         "Commodities" = 3,
+                         "Real Estate" = 4,
+                         "GTAA/Risk Parity" = 5,
+                         "Low Beta Hedge Funds" = 6,
+                         "Mixed Credit" = 7,
+                         "EMD" = 8,
+                         "Private Debt" = 9,
+                         "Core FI" = 10,
+                         "Global FI" = 11,
+                         "Short Duration" = 12,
+                         "Cash Equivalents" = 13)
+                       selected = "Public Equity")),
   
   
   mainPanel(
