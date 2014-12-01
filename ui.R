@@ -21,7 +21,7 @@ shinyUI(pageWithSidebar(
                          "Core FI" = 10,
                          "Global FI" = 11,
                          "Short Duration" = 12,
-                         "Cash Equivalents" = 13)
+                         "Cash Equivalents" = 13),
                        selected = "Public Equity")),
   
   
