@@ -24,5 +24,4 @@ shinyServer(function(input, output) {
     table[13,] = sqrt(table[13,])*sqrt(252)
   # to generate a table of summary statistics
   output$summary <- renderTable(table)
-  })
 })
