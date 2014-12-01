@@ -16,8 +16,13 @@ shinyServer(function(input, output) {
   })
   
   # Use table.Stats from Performance Analytics package
+    table = table.Stats(R = plan.ret.xts,ci = .95)
+    table = table[13,]*sqrt(252)
+    View(table)
+    table = table[13]*sqrt(252)
+    table = table.Stats(R = plan.ret.xts,ci = .95)
+    table[13,] = sqrt(table[13,])*sqrt(252)
   # to generate a table of summary statistics
-  output$summary <- renderTable({
-    table.Stats(plan.ret.xts[, as.numeric(input$symbol)])
+  output$summary <- renderTable(table)
   })
 })
