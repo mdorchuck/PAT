@@ -2,7 +2,7 @@
 shinyUI(pageWithSidebar(
   
   # Application title
-  headerPanel("Performance Summary"),
+  headerPanel("South Carolina Plan Performance Summary"),
   
   # Sidebar with controls to select the variable to plot
   # The value corresponds to the column in the managers data
