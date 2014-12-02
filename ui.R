@@ -2,26 +2,31 @@
 shinyUI(pageWithSidebar(
   
   # Application title
-  headerPanel("South Carolina Plan Performance Summary"),
+  headerPanel("South Carolina Historical Performance Summary"),
   
   # Sidebar with controls to select the variable to plot
   # The value corresponds to the column in the managers data
   # For example, HAM1 is managers[, 1], HAM2 is managers[, 2], and so on
   sidebarPanel(
     checkboxGroupInput("symbol", "Select Symbol(s):",
-                       c("Public Equity" = 1, 
-                         "Private Equity" = 2,
+                       c("Global Public Equity" = 1, 
+                         "GTAA" = 2,
                          "Commodities" = 3,
-                         "Real Estate" = 4,
-                         "GTAA/Risk Parity" = 5,
-                         "Low Beta Hedge Funds" = 6,
-                         "Mixed Credit" = 7,
-                         "EMD" = 8,
-                         "Private Debt" = 9,
-                         "Core FI" = 10,
-                         "Global FI" = 11,
+                         "EMD Estate" = 4,
+                         "Real Estate" = 5,
+                         "Core Fixed Income" = 6,
+                         "Private Equity" = 7,
+                         "Low Beta Hedge Funds" = 8,
+                         "Mixed Credit" = 9,
+                         "Private Debt" = 10,
+                         "Global Fixed Income" = 11,
                          "Short Duration" = 12,
-                         "Cash Equivalents" = 13),
+                         "Cash Equivalents" = 13,
+                         "Large Cap Equity" = 14,
+                         "S-Mid Cap Equity" = 15,
+                         "Developed International Equity" = 16,
+                         "Emerging Market Equity" = 17,
+                         "Total US Equity" = 18),
                        selected = "Public Equity")),
   
   
