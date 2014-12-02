@@ -1,7 +1,7 @@
 library(shiny)
 library(PerformanceAnalytics)
 setwd(dir = "C:/Users/bloomberg/Documents/rdata")
-plan.ret = read.csv("portreturnsshiny.csv")
+plan.ret = read.csv("planhistoricalreturns.csv")
 plan.ret$X = as.Date(x = plan.ret$X,format = "%m/%d/%Y")
 plan.ret.xts = as.xts(x = plan.ret[,2:14],order.by = plan.ret$X)
 # Define server logic required to plot relative performance
